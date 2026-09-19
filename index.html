@@ -1,51 +1,592 @@
 <!DOCTYPE html>
-<html lang=="en">
+<html lang="en">
 <head>
-    <meta charset=="UTF-8">
-    <meta name=="viewport" content=="width=device-width, initial-scale=1.0">
-    <title>Your Name | Academic HomepageYour Name | Academic Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gao Zixian | Academic Homepage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Helvetica, Arial, sans-serif;
+            color: #333;
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.96);
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-name {
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        .nav-links a {
+            margin-left: 24px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Main container */
+        .container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 60px 30px;
+        }
+
+        /* Header */
+        .intro {
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            gap: 70px;
+            align-items: center;
+            padding: 45px 0 70px;
+        }
+
+        .intro h1 {
+            font-size: 42px;
+            font-weight: 600;
+            margin: 0 0 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .intro .position {
+            font-size: 19px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            max-width: 720px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .contact {
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        .contact a {
+            margin-right: 20px;
+        }
+
+        /* Photo placeholder */
+        .photo {
+            width: 210px;
+            height: 250px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Sections */
+        section {
+            padding: 45px 0;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        section h2 {
+            font-size: 23px;
+            font-weight: 600;
+            margin: 0 0 28px;
+            color: #222;
+        }
+
+        /* Research interests */
+        .research-interests {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 60px;
+            max-width: 800px;
+        }
+
+        .research-interests div {
+            font-size: 16px;
+        }
+
+        /* Research projects */
+        .project {
+            margin-bottom: 34px;
+        }
+
+        .project-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .project-meta {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .project p {
+            margin: 0;
+            color: #555;
+            max-width: 900px;
+        }
+
+        /* Publications */
+        .publication {
+            margin-bottom: 22px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .publication-number {
+            position: absolute;
+            left: 0;
+            color: #777;
+        }
+
+        .publication em {
+            color: #555;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 25px;
+        }
+
+        .education-school {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .education-degree {
+            color: #555;
+        }
+
+        .education-date {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #e5e5e5;
+            padding: 30px;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+        }
+
+        /* Mobile */
+        @media (max-width: 750px) {
+
+            .nav-container {
+                padding: 14px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .container {
+                padding: 35px 20px;
+            }
+
+            .intro {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding-top: 25px;
+            }
+
+            .intro h1 {
+                font-size: 34px;
+            }
+
+            .research-interests {
+                grid-template-columns: 1fr;
+            }
+
+            .photo {
+                width: 160px;
+                height: 200px;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-<h1>Your NameYour Name</h1>
+<!-- Navigation -->
+<nav>
+    <div class="nav-container">
 
-<p>
-M.Ed. Student in Educational TechnologyM.Ed. Student in Educational Technology<br>
-Beijing Normal UniversityBeijing Normal University
-</p>
+        <div class="nav-name">
+            Gao Zixian
+        </div>
 
-<h2>Research InterestsResearch Interests</h2>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#education">Education</a>
+            <a href="CV.pdf">CV</a>
+        </div>
 
-<ul>
-    <li>Artificial Intelligence in EducationArtificial Intelligence in Education</li>
-    <li>AI-Supported Teaching and LearningAI-Supported Teaching and Learning</li>
-    <li>Instructional DesignInstructional Design</li>
-    <li>Human-Computer InteractionHuman-Computer Interaction</li>
-</ul>
+    </div>
+</nav>
 
-<h2>ResearchResearch</h2>
 
-<p>
-My research interests focus on the intersection of artificial intelligence,My research interests focus on the intersection of artificial intelligence,
-education, instructional design, and human-computer interaction.education, instructional design, and human-computer interaction.
-</p>
+<main class="container">
 
-<h2>PublicationsPublications</h2>
+    <!-- Introduction -->
+    <div class="intro">
 
-<p>Coming soon.Coming soon.</p>
+        <div>
 
-<h2>CVCV</h2>
+            <h1>Gao Zixian</h1>
 
-<p>
-<a href=="CV.pdf">Download CVDownload CV</a>
-</p>
+            <div class="position">
+                M.Ed. Student in Educational Technology<br>
+                Beijing Normal University
+            </div>
 
-<h2>ContactContact</h2>
+            <p>
+                I am a master's student in Educational Technology at
+                Beijing Normal University. My research interests lie at
+                the intersection of artificial intelligence, instructional
+                design, teaching and learning, and educational technology.
+            </p>
 
-<p>
-Email: your-email@example.comEmail: your-email@example.com
-</p>
+            <p>
+                I am particularly interested in AI-supported teaching and
+                learning, instructional design, and the role of human
+                pedagogical judgment in AI-mediated educational environments.
+            </p>
+
+            <div class="contact">
+                <a href="mailto:gaozixian@mail.bnu.edu.cn">
+                    Email
+                </a>
+
+                <a href="CV.pdf">
+                    CV
+                </a>
+
+                <a href="https://github.com/gggaozx">
+                    GitHub
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Photo -->
+        <div class="photo">
+            Photo
+        </div>
+
+    </div>
+
+
+    <!-- Research Interests -->
+    <section id="about">
+
+        <h2>Research Interests</h2>
+
+        <div class="research-interests">
+
+            <div>
+                Artificial Intelligence in Education (AIED)
+            </div>
+
+            <div>
+                Instructional Design and Curriculum Development
+            </div>
+
+            <div>
+                LLM-Supported Teaching and Learning
+            </div>
+
+            <div>
+                Teacher Professional Development and AI Literacy
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Research -->
+    <section id="research">
+
+        <h2>Research</h2>
+
+
+        <div class="project">
+
+            <div class="project-title">
+                Value-Oriented Thematic Learning Design
+            </div>
+
+            <div class="project-meta">
+                Master's Thesis · 2024–2027
+            </div>
+
+            <p>
+                Investigating how value-oriented themes can be systematically
+                designed to support value education, with particular attention
+                to moral dilemma scenarios, value conflicts, and learners'
+                value-based decision making. The project develops and iteratively
+                refines a reusable methodology for value-oriented thematic
+                learning design.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <div class="project-title">
+                The Limitations of Generative Artificial Intelligence
+                in Instructional Design
+            </div>
+
+            <div class="project-meta">
+                Research Project · 2025–2026
+            </div>
+
+            <p>
+                Investigating the pedagogical quality and practical usability
+                of generative AI in instructional design through a qualitative
+                comparison between AI-generated and human-designed lesson plans.
+                The project examines learning objectives, goal–method alignment,
+                temporal structure, and teacher–student interaction.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <div class="project-title">
+                Professional Identity and Reconstruction Among Researchers
+                in the AI Era
+            </div>
+
+            <div class="project-meta">
+                Course Research Project · 2024–2025
+            </div>
+
+            <p>
+                Examining how the development of AI shapes professional identity
+                among researchers in Chinese higher education through
+                qualitative interviews and thematic analysis.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <div class="project-title">
+                Educational Big Data and Learning Analytics
+                for Personalized Learning
+            </div>
+
+            <div class="project-meta">
+                Undergraduate Thesis · 2023–2024
+            </div>
+
+            <p>
+                Designed and implemented an educational data analytics system
+                for analyzing students' learning and behavioral data to support
+                personalized learning and data-informed instructional decision
+                making.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Publications -->
+    <section id="publications">
+
+        <h2>Publications &amp; Conference Presentations</h2>
+
+
+        <div class="publication">
+
+            <span class="publication-number">1.</span>
+
+            Yang, K., &amp; <strong>Gao, Z.</strong> (2025).
+            A brief discussion of value education.
+            <em>China Educational Technology</em>, (2), 21–28, 58.
+
+        </div>
+
+
+        <div class="publication">
+
+            <span class="publication-number">2.</span>
+
+            <strong>Gao, Z.</strong>, &amp; Yang, K. (2026).
+            The limitations of generative artificial intelligence
+            in instructional design.
+            <em>Journal of Distance Education</em>.
+            <em>Under review.</em>
+
+        </div>
+
+
+        <div class="publication">
+
+            <span class="publication-number">3.</span>
+
+            <strong>Gao, Z.</strong> (2026).
+            Reconfiguring pedagogical agency in GenAI-supported
+            instructional design.
+            <em>2026 British Educational Research Association (BERA)
+            Annual Meeting</em>.
+            <em>Accepted for presentation.</em>
+
+        </div>
+
+
+        <div class="publication">
+
+            <span class="publication-number">4.</span>
+
+            <strong>Gao, Z.</strong> (2027).
+            Designing for values: A critical review of value-themed
+            learning design in contemporary education.
+            <em>2027 American Educational Research Association (AERA)
+            Annual Meeting</em>.
+            <em>Conference proposal under review.</em>
+
+        </div>
+
+
+        <div class="publication">
+
+            <span class="publication-number">5.</span>
+
+            <strong>Gao, Z.</strong> (2026).
+            Human-centered AI for value-oriented thematic learning:
+            From transmission to value inquiry.
+            <em>2026 China–Japan–Korea Forum on Teacher and Student Education</em>.
+            <em>Forum submission under review.</em>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+
+        <h2>Education</h2>
+
+
+        <div class="education-item">
+
+            <div class="education-school">
+                Beijing Normal University
+            </div>
+
+            <div class="education-degree">
+                M.Ed. in Educational Technology · GPA: 3.6/4
+            </div>
+
+            <div class="education-date">
+                2024–2027
+            </div>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <div class="education-school">
+                Henan University of Technology
+            </div>
+
+            <div class="education-degree">
+                B.Eng. in Software Engineering · GPA: 3.9/4
+            </div>
+
+            <div class="education-date">
+                2020–2024
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section>
+
+        <h2>Contact</h2>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:gaozixian@mail.bnu.edu.cn">
+                gaozixian@mail.bnu.edu.cn
+            </a>
+        </p>
+
+        <p>
+            Beijing Normal University<br>
+            Beijing, China
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    © 2026 Gao Zixian
+
+</footer>
+
 
 </body>
 </html>
