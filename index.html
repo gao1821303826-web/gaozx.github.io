@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,12 +17,21 @@
 
         body {
             margin: 0;
-            background: #fff;
+            background: #ffffff;
             color: #222;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Helvetica, Arial, sans-serif;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Helvetica,
+                Arial,
+                sans-serif;
             line-height: 1.6;
         }
+
+        /* =========================
+           Layout
+        ========================= */
 
         .container {
             max-width: 1000px;
@@ -31,7 +39,9 @@
             padding: 0 32px;
         }
 
-        /* ---------- Header ---------- */
+        /* =========================
+           Header
+        ========================= */
 
         header {
             padding: 48px 0 28px;
@@ -46,7 +56,12 @@
 
         .name {
             margin: 0;
-            font-family: Georgia, "Times New Roman", serif;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 31px;
             font-weight: 500;
             letter-spacing: -0.4px;
@@ -58,6 +73,10 @@
             color: #777;
         }
 
+        /* =========================
+           Navigation
+        ========================= */
+
         nav {
             display: flex;
             gap: 22px;
@@ -67,14 +86,18 @@
             color: #666;
             text-decoration: none;
             font-size: 14px;
-            transition: color .2s ease;
+
+            transition:
+                color 0.2s ease;
         }
 
         nav a:hover {
             color: #111;
         }
 
-        /* ---------- About ---------- */
+        /* =========================
+           About
+        ========================= */
 
         .about-section {
             padding: 48px 0 45px;
@@ -82,7 +105,12 @@
 
         .section-title {
             margin: 0 0 20px;
-            font-family: Georgia, "Times New Roman", serif;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 22px;
             font-weight: 500;
         }
@@ -90,12 +118,16 @@
         .about {
             max-width: 900px;
             margin: 0;
+
             font-size: 15px;
             line-height: 1.8;
+
             color: #444;
         }
 
-        /* ---------- Projects ---------- */
+        /* =========================
+           Projects
+        ========================= */
 
         .projects-section {
             padding: 8px 0 70px;
@@ -103,125 +135,189 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 32px 28px;
         }
+
+        /* =========================
+           Project Card
+        ========================= */
 
         .project-card {
             display: block;
+
             color: inherit;
             text-decoration: none;
-            transition: transform .25s ease;
+
+            transition:
+                transform 0.25s ease;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
         }
 
+        /* =========================
+           Project Image
+        ========================= */
+
         .project-image {
             position: relative;
+
             width: 100%;
+
             aspect-ratio: 16 / 10;
+
             background: #f3f3f3;
+
             border: 1px solid #e4e4e4;
+
             overflow: hidden;
         }
 
         .project-image img {
             width: 100%;
             height: 100%;
+
             object-fit: cover;
+
             display: block;
-            transition: transform .45s ease;
+
+            transition:
+                transform 0.45s ease;
         }
 
         .project-card:hover .project-image img {
             transform: scale(1.035);
         }
 
-        .image-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #aaa;
-            font-size: 12px;
-            letter-spacing: .2px;
-        }
+        /* =========================
+           Hover Overlay
+        ========================= */
 
         .project-overlay {
             position: absolute;
+
             inset: 0;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
-            background: rgba(255,255,255,.72);
-            opacity: 0;
-            transition: opacity .25s ease;
-        }
 
-        .project-overlay span {
-            padding: 8px 15px;
-            border: 1px solid #333;
-            background: #fff;
-            color: #222;
-            font-size: 12px;
-            letter-spacing: .3px;
+            background: rgba(255, 255, 255, 0.72);
+
+            opacity: 0;
+
+            transition:
+                opacity 0.25s ease;
         }
 
         .project-card:hover .project-overlay {
             opacity: 1;
         }
 
+        .project-overlay span {
+            padding: 8px 15px;
+
+            border: 1px solid #333;
+
+            background: #fff;
+
+            color: #222;
+
+            font-size: 12px;
+
+            letter-spacing: 0.3px;
+        }
+
+        /* =========================
+           Project Text
+        ========================= */
+
         .project-number {
             margin-top: 16px;
+
             font-size: 11px;
+
             color: #999;
+
             letter-spacing: 1.3px;
         }
 
         .project-title {
             margin: 4px 0 5px;
-            font-family: Georgia, "Times New Roman", serif;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
             font-size: 21px;
+
             font-weight: 500;
+
             line-height: 1.35;
         }
 
         .project-description {
             margin: 0;
+
             font-size: 13px;
+
             color: #777;
+
             line-height: 1.55;
         }
 
+        /* =========================
+           Tags
+        ========================= */
+
         .tags {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 6px;
+
             margin-top: 10px;
         }
 
         .tag {
             padding: 2px 7px;
+
             border: 1px solid #ddd;
+
             border-radius: 2px;
+
             color: #777;
+
             font-size: 10px;
+
             background: #fafafa;
         }
 
-        /* ---------- Footer ---------- */
+        /* =========================
+           Footer
+        ========================= */
 
         footer {
             border-top: 1px solid #e8e8e8;
+
             padding: 25px 0 35px;
+
             color: #999;
+
             font-size: 11px;
         }
 
-        /* ---------- Mobile ---------- */
+        /* =========================
+           Mobile
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -241,13 +337,18 @@
                 padding-top: 38px;
             }
 
+            .about {
+                font-size: 14px;
+            }
+
             .projects-grid {
                 grid-template-columns: 1fr;
+
                 gap: 42px;
             }
 
-            .about {
-                font-size: 14px;
+            .project-title {
+                font-size: 20px;
             }
         }
     </style>
@@ -256,239 +357,392 @@
 
 <body>
 
-<header>
-    <div class="container">
+    <!-- =========================
+         Header
+    ========================= -->
 
-        <div class="header-inner">
+    <header>
+        <div class="container">
 
-            <div>
-                <h1 class="name">Gao Zixian</h1>
+            <div class="header-inner">
 
-                <div class="subtitle">
-                    Educational Technology · AIED · Human-Centered Technology
+                <div>
+                    <h1 class="name">
+                        Gao Zixian
+                    </h1>
+
+                    <div class="subtitle">
+                        Educational Technology · AIED · Human-Centered Technology
+                    </div>
                 </div>
-            </div>
 
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-            </nav>
 
-        </div>
+                <nav>
+                    <a href="#about">
+                        About
+                    </a>
 
-    </div>
-</header>
-
-
-<main>
-
-    <!-- ================= ABOUT ================= -->
-
-    <section id="about" class="about-section">
-
-        <div class="container">
-
-            <h2 class="section-title">About</h2>
-
-            <p class="about">
-                I am a master's student in Educational Technology at Beijing Normal University,
-                with a bachelor's background in Software Engineering. My research interests lie
-                at the intersection of Artificial Intelligence in Education (AIED), instructional
-                design, and human-centered technology. I approach educational research from a
-                design perspective, viewing educational systems as complex systems that can be
-                systematically constructed through design technologies, rather than relying solely
-                on intuition or experience. My work focuses on developing operational and verifiable
-                approaches to the design of learning environments, instructional processes, and
-                educational technologies, with particular interests in AI-supported teaching and
-                learning, learning design, curriculum development, teacher professional development,
-                and AI literacy. I am also interested in the relationship among AI, humans, and values,
-                particularly how ethical, moral, and other value considerations can be incorporated
-                into the design of AI-mediated educational systems.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= PROJECTS ================= -->
-
-    <section id="projects" class="projects-section">
-
-        <div class="container">
-
-            <h2 class="section-title">Selected Projects</h2>
-
-            <div class="projects-grid">
-
-
-                <!-- PROJECT 01 -->
-
-                <a class="project-card" href="projects/maic.html">
-
-                    <div class="project-image">
-
-                        <!-- Replace with your image -->
-                        <div class="image-placeholder">
-                            Project image
-                        </div>
-
-                        <div class="project-overlay">
-                            <span>View Project →</span>
-                        </div>
-
-                    </div>
-
-                    <div class="project-number">01</div>
-
-                    <h3 class="project-title">
-                        OpenMAIC — Massive AI-empowered Courses
-                    </h3>
-
-                    <p class="project-description">
-                        An AI-powered learning environment integrating LLMs,
-                        multi-agent interaction, and multimodal learning.
-                    </p>
-
-                    <div class="tags">
-                        <span class="tag">LLM</span>
-                        <span class="tag">Multi-Agent</span>
-                        <span class="tag">RAG</span>
-                        <span class="tag">AIED</span>
-                    </div>
-
-                </a>
-
-
-                <!-- PROJECT 02 -->
-
-                <a class="project-card" href="projects/big-data.html">
-
-                    <div class="project-image">
-
-                        <!-- Replace with your image -->
-                        <div class="image-placeholder">
-                            Project image
-                        </div>
-
-                        <div class="project-overlay">
-                            <span>View Project →</span>
-                        </div>
-
-                    </div>
-
-                    <div class="project-number">02</div>
-
-                    <h3 class="project-title">
-                        Educational Big Data Student Information System
-                    </h3>
-
-                    <p class="project-description">
-                        A distributed educational data system for collecting,
-                        processing, and visualizing large-scale student data.
-                    </p>
-
-                    <div class="tags">
-                        <span class="tag">Hadoop</span>
-                        <span class="tag">Spark</span>
-                        <span class="tag">Kafka</span>
-                        <span class="tag">SQL</span>
-                    </div>
-
-                </a>
-
-
-                <!-- PROJECT 03 -->
-
-                <a class="project-card" href="projects/vr-earth.html">
-
-                    <div class="project-image">
-
-                        <!-- Replace with your image -->
-                        <div class="image-placeholder">
-                            Project image / video
-                        </div>
-
-                        <div class="project-overlay">
-                            <span>View Project →</span>
-                        </div>
-
-                    </div>
-
-                    <div class="project-number">03</div>
-
-                    <h3 class="project-title">
-                        Earth Revolution and Rotation VR
-                    </h3>
-
-                    <p class="project-description">
-                        An interactive Unity-based VR learning environment
-                        for exploring Earth's motion and geographical concepts.
-                    </p>
-
-                    <div class="tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">VR</span>
-                        <span class="tag">3D Visualization</span>
-                    </div>
-
-                </a>
-
-
-                <!-- PROJECT 04 -->
-
-                <a class="project-card" href="projects/graphrag.html">
-
-                    <div class="project-image">
-
-                        <!-- Replace with your image -->
-                        <div class="image-placeholder">
-                            Project image / architecture
-                        </div>
-
-                        <div class="project-overlay">
-                            <span>View Project →</span>
-                        </div>
-
-                    </div>
-
-                    <div class="project-number">04</div>
-
-                    <h3 class="project-title">
-                        Educational Knowledge Graph &amp; GraphRAG
-                    </h3>
-
-                    <p class="project-description">
-                        An educational knowledge system combining knowledge graphs,
-                        GraphRAG, and LLM-based retrieval.
-                    </p>
-
-                    <div class="tags">
-                        <span class="tag">GraphRAG</span>
-                        <span class="tag">Neo4j</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">LLM</span>
-                    </div>
-
-                </a>
-
+                    <a href="#projects">
+                        Projects
+                    </a>
+                </nav>
 
             </div>
 
         </div>
-
-    </section>
-
-</main>
+    </header>
 
 
-<footer>
-    <div class="container">
-        © Gao Zixian
-    </div>
-</footer>
+    <main>
+
+        <!-- =========================
+             About
+        ========================= -->
+
+        <section
+            id="about"
+            class="about-section"
+        >
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    About
+                </h2>
+
+
+                <p class="about">
+
+                    I am a master's student in Educational Technology at
+                    Beijing Normal University, with a bachelor's background
+                    in Software Engineering. My research interests lie at
+                    the intersection of Artificial Intelligence in Education
+                    (AIED), instructional design, and human-centered technology.
+                    I approach educational research from a design perspective,
+                    viewing educational systems as complex systems that can be
+                    systematically constructed through design technologies,
+                    rather than relying solely on intuition or experience.
+                    My work focuses on developing operational and verifiable
+                    approaches to the design of learning environments,
+                    instructional processes, and educational technologies,
+                    with particular interests in AI-supported teaching and
+                    learning, learning design, curriculum development, teacher
+                    professional development, and AI literacy. I am also
+                    interested in the relationship among AI, humans, and values,
+                    particularly how ethical, moral, and other value considerations
+                    can be incorporated into the design of AI-mediated
+                    educational systems.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Selected Projects
+        ========================= -->
+
+        <section
+            id="projects"
+            class="projects-section"
+        >
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Selected Projects
+                </h2>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- =====================
+                         Project 01
+                    ====================== -->
+
+                    <a
+                        class="project-card"
+                        href="projects/maic.html"
+                    >
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/maic-01.png"
+                                alt="OpenMAIC"
+                            >
+
+                            <div class="project-overlay">
+
+                                <span>
+                                    View Project →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+
+                        <h3 class="project-title">
+                            OpenMAIC — Massive AI-empowered Courses
+                        </h3>
+
+
+                        <p class="project-description">
+                            An AI-powered learning environment integrating
+                            LLMs, multi-agent interaction, and multimodal learning.
+                        </p>
+
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                LLM
+                            </span>
+
+                            <span class="tag">
+                                Multi-Agent
+                            </span>
+
+                            <span class="tag">
+                                RAG
+                            </span>
+
+                            <span class="tag">
+                                AIED
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- =====================
+                         Project 02
+                    ====================== -->
+
+                    <a
+                        class="project-card"
+                        href="projects/big-data.html"
+                    >
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/big-data-01.png"
+                                alt="Educational Big Data Student Information System"
+                            >
+
+                            <div class="project-overlay">
+
+                                <span>
+                                    View Project →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-number">
+                            02
+                        </div>
+
+
+                        <h3 class="project-title">
+                            Educational Big Data Student Information System
+                        </h3>
+
+
+                        <p class="project-description">
+                            A distributed educational data system for collecting,
+                            processing, and visualizing large-scale student data.
+                        </p>
+
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                Hadoop
+                            </span>
+
+                            <span class="tag">
+                                Spark
+                            </span>
+
+                            <span class="tag">
+                                Kafka
+                            </span>
+
+                            <span class="tag">
+                                SQL
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- =====================
+                         Project 03
+                    ====================== -->
+
+                    <a
+                        class="project-card"
+                        href="projects/vr-earth.html"
+                    >
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/vr-earth-01.png"
+                                alt="Earth Revolution and Rotation VR"
+                            >
+
+                            <div class="project-overlay">
+
+                                <span>
+                                    View Project →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-number">
+                            03
+                        </div>
+
+
+                        <h3 class="project-title">
+                            Earth Revolution and Rotation VR
+                        </h3>
+
+
+                        <p class="project-description">
+                            An interactive Unity-based VR learning environment
+                            for exploring Earth's motion and geographical concepts.
+                        </p>
+
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                Unity
+                            </span>
+
+                            <span class="tag">
+                                C#
+                            </span>
+
+                            <span class="tag">
+                                VR
+                            </span>
+
+                            <span class="tag">
+                                3D Visualization
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- =====================
+                         Project 04
+                    ====================== -->
+
+                    <a
+                        class="project-card"
+                        href="projects/graphrag.html"
+                    >
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/graphrag-01.png"
+                                alt="Educational Knowledge Graph and GraphRAG"
+                            >
+
+                            <div class="project-overlay">
+
+                                <span>
+                                    View Project →
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-number">
+                            04
+                        </div>
+
+
+                        <h3 class="project-title">
+                            Educational Knowledge Graph &amp; GraphRAG
+                        </h3>
+
+
+                        <p class="project-description">
+                            An educational knowledge system combining knowledge
+                            graphs, GraphRAG, and LLM-based retrieval.
+                        </p>
+
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                GraphRAG
+                            </span>
+
+                            <span class="tag">
+                                Neo4j
+                            </span>
+
+                            <span class="tag">
+                                Docker
+                            </span>
+
+                            <span class="tag">
+                                LLM
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         Footer
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+            © Gao Zixian
+        </div>
+
+    </footer>
 
 </body>
 </html>
-```
