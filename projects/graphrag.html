@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Educational Knowledge Graph & GraphRAG — Gao Zixian</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
             background: #fff;
             color: #222;
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Helvetica,
-                Arial,
-                sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Helvetica, Arial, sans-serif;
+            line-height: 1.7;
         }
 
         .container {
@@ -42,16 +34,14 @@
             font-size: 13px;
         }
 
-        .back:hover {
-            color: #111;
-        }
+        .back:hover { color: #111; }
 
         main {
             padding: 52px 0 80px;
         }
 
         h1 {
-            margin: 0 0 14px;
+            margin: 0 0 12px;
             font-family: Georgia, "Times New Roman", serif;
             font-size: 34px;
             font-weight: 500;
@@ -59,17 +49,29 @@
         }
 
         .subtitle {
-            margin: 0 0 36px;
+            margin: 0 0 38px;
             color: #777;
             font-size: 14px;
         }
 
-        .overview {
-            max-width: 820px;
-            margin-bottom: 45px;
+        h2 {
+            margin: 42px 0 16px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        p, ul {
             color: #444;
             font-size: 15px;
-            line-height: 1.8;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
         }
 
         .media {
@@ -92,17 +94,9 @@
         }
 
         @media (max-width: 700px) {
-            .container {
-                padding: 0 20px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            main {
-                padding-top: 38px;
-            }
+            .container { padding: 0 20px; }
+            h1 { font-size: 28px; }
+            main { padding-top: 38px; }
         }
     </style>
 </head>
@@ -111,36 +105,74 @@
 
 <header>
     <div class="container">
-        <a class="back" href="../index.html">
-            ← Back to Projects
-        </a>
+        <a class="back" href="../index.html">← Back to Projects</a>
     </div>
 </header>
 
 <main>
     <div class="container">
 
-        <h1>
-            Educational Knowledge Graph &amp; GraphRAG
-        </h1>
+        <h1>Educational Knowledge Graph &amp; GraphRAG</h1>
 
         <p class="subtitle">
             Knowledge Graph · GraphRAG · Neo4j · LLM
         </p>
 
-        <p class="overview">
-            An educational knowledge system combining knowledge graphs,
-            GraphRAG, and large language models. The project involved
-            deploying Neo4j in a Docker environment and constructing an
-            educational knowledge graph to support graph-based knowledge
-            retrieval.
+        <p>
+            This project explored the use of knowledge graphs and
+            graph-based retrieval to organize and retrieve educational
+            knowledge for large language model applications.
         </p>
 
+        <p>
+            An educational knowledge graph was constructed to represent
+            relationships among educational concepts and knowledge elements.
+            Neo4j was deployed in a Docker environment as the graph database,
+            providing the infrastructure for storing and querying the
+            structured knowledge.
+        </p>
+
+        <p>
+            GraphRAG was then introduced as a retrieval approach that connects
+            graph-structured knowledge with large language models. The project
+            provided practical experience in combining structured knowledge
+            representation with LLM-based information retrieval.
+        </p>
+
+        <h2>Implementation</h2>
+
+        <ul>
+            <li>
+                Deployed Neo4j using Docker as the underlying graph database.
+            </li>
+
+            <li>
+                Constructed an educational knowledge graph to represent
+                relationships among educational knowledge elements.
+            </li>
+
+            <li>
+                Explored GraphRAG for graph-based knowledge retrieval.
+            </li>
+
+            <li>
+                Integrated graph-structured knowledge with large language
+                model applications.
+            </li>
+        </ul>
+
+        <h2>Technologies</h2>
+
+        <p>
+            Knowledge Graph · GraphRAG · Neo4j · Docker ·
+            Large Language Models
+        </p>
+
+        <h2>Project Media</h2>
+
         <div class="media">
-            <img
-                src="../assets/graphrag-01.png"
-                alt="Educational Knowledge Graph and GraphRAG"
-            >
+            <img src="../assets/graphrag-01.png"
+                 alt="Educational Knowledge Graph and GraphRAG">
         </div>
 
     </div>
