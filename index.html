@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gao Zixian | Academic Homepage</title>
+    <title>Gao Zixian</title>
 
     <style>
         * {
@@ -17,576 +18,617 @@
 
         body {
             margin: 0;
+            background: #ffffff;
+            color: #222222;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                          Helvetica, Arial, sans-serif;
-            color: #333;
-            background: #ffffff;
-            line-height: 1.7;
+            line-height: 1.65;
         }
 
-        a {
-            color: #333;
-            text-decoration: none;
+        /* ---------- Layout ---------- */
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 28px;
         }
 
-        a:hover {
-            text-decoration: underline;
-        }
+        /* ---------- Header ---------- */
 
-        /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            background: rgba(255,255,255,0.96);
+        header {
+            padding: 55px 0 35px;
             border-bottom: 1px solid #e5e5e5;
-            z-index: 1000;
         }
 
-        .nav-container {
-            max-width: 1050px;
-            margin: auto;
-            padding: 16px 30px;
+        .header-inner {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-end;
+            gap: 30px;
         }
 
-        .nav-name {
-            font-weight: 600;
-            font-size: 17px;
+        .name {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 32px;
+            font-weight: 500;
+            letter-spacing: -0.4px;
+            margin: 0;
         }
 
-        .nav-links a {
-            margin-left: 24px;
-            font-size: 14px;
-            color: #555;
+        .subtitle {
+            margin-top: 7px;
+            font-size: 15px;
+            color: #666666;
         }
 
-        /* Main container */
-        .container {
-            max-width: 1050px;
-            margin: auto;
-            padding: 60px 30px;
-        }
-
-        /* Header */
-        .intro {
-            display: grid;
-            grid-template-columns: 1fr 250px;
-            gap: 70px;
-            align-items: center;
-            padding: 45px 0 70px;
-        }
-
-        .intro h1 {
-            font-size: 42px;
-            font-weight: 600;
-            margin: 0 0 12px;
-            letter-spacing: -0.5px;
-        }
-
-        .intro .position {
-            font-size: 19px;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .intro p {
-            max-width: 720px;
-            color: #555;
-            font-size: 16px;
-        }
-
-        .contact {
-            margin-top: 25px;
-            font-size: 14px;
-        }
-
-        .contact a {
-            margin-right: 20px;
-        }
-
-        /* Photo placeholder */
-        .photo {
-            width: 210px;
-            height: 250px;
-            border: 1px solid #ddd;
+        nav {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #999;
+            gap: 22px;
+        }
+
+        nav a {
+            color: #555555;
+            text-decoration: none;
             font-size: 14px;
         }
 
-        /* Sections */
+        nav a:hover {
+            color: #000000;
+        }
+
+        /* ---------- Sections ---------- */
+
         section {
-            padding: 45px 0;
-            border-top: 1px solid #e5e5e5;
+            padding: 65px 0;
         }
 
-        section h2 {
+        .section-title {
+            font-family: Georgia, "Times New Roman", serif;
             font-size: 23px;
-            font-weight: 600;
-            margin: 0 0 28px;
-            color: #222;
+            font-weight: 500;
+            margin: 0 0 27px;
         }
 
-        /* Research interests */
-        .research-interests {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px 60px;
-            max-width: 800px;
-        }
+        /* ---------- About ---------- */
 
-        .research-interests div {
+        .about {
+            max-width: 820px;
             font-size: 16px;
+            color: #333333;
         }
 
-        /* Research projects */
+        /* ---------- Projects ---------- */
+
         .project {
-            margin-bottom: 34px;
+            padding: 0 0 65px;
+            margin-bottom: 65px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .project-number {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            color: #888888;
+            margin-bottom: 7px;
         }
 
         .project-title {
-            font-size: 17px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin: 0 0 8px;
+            color: #222222;
+        }
+
+        .project-subtitle {
+            font-size: 14px;
+            color: #777777;
+            margin-bottom: 24px;
+        }
+
+        /* ---------- Media Placeholder ---------- */
+
+        .project-media {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #f5f5f5;
+            border: 1px solid #e2e2e2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .project-media span {
+            font-size: 13px;
+            color: #999999;
+            letter-spacing: 0.3px;
+        }
+
+        .project-media img,
+        .project-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-description {
+            max-width: 820px;
+            font-size: 15px;
+            color: #444444;
+            margin-bottom: 20px;
+        }
+
+        /* ---------- Features ---------- */
+
+        .features {
+            margin: 22px 0;
+        }
+
+        .features h4 {
+            font-size: 14px;
             font-weight: 600;
+            margin: 0 0 10px;
+            color: #333333;
+        }
+
+        .features ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #555555;
+            font-size: 14px;
+        }
+
+        .features li {
             margin-bottom: 5px;
         }
 
-        .project-meta {
-            color: #777;
-            font-size: 14px;
-            margin-bottom: 8px;
+        /* ---------- Technology ---------- */
+
+        .technology {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666666;
         }
 
-        .project p {
-            margin: 0;
-            color: #555;
-            max-width: 900px;
-        }
-
-        /* Publications */
-        .publication {
-            margin-bottom: 22px;
-            padding-left: 28px;
-            position: relative;
-        }
-
-        .publication-number {
-            position: absolute;
-            left: 0;
-            color: #777;
-        }
-
-        .publication em {
-            color: #555;
-        }
-
-        /* Education */
-        .education-item {
-            margin-bottom: 25px;
-        }
-
-        .education-school {
-            font-size: 17px;
+        .technology strong {
+            color: #333333;
             font-weight: 600;
         }
 
-        .education-degree {
-            color: #555;
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 9px;
         }
 
-        .education-date {
-            color: #777;
-            font-size: 14px;
+        .tag {
+            padding: 3px 9px;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #666666;
+            background: #fafafa;
         }
 
-        /* Footer */
+        /* ---------- Footer ---------- */
+
         footer {
             border-top: 1px solid #e5e5e5;
-            padding: 30px;
-            text-align: center;
-            color: #999;
-            font-size: 13px;
+            padding: 30px 0 45px;
+            color: #999999;
+            font-size: 12px;
         }
 
-        /* Mobile */
-        @media (max-width: 750px) {
+        /* ---------- Mobile ---------- */
 
-            .nav-container {
-                padding: 14px 20px;
-            }
-
-            .nav-links {
-                display: none;
-            }
+        @media (max-width: 650px) {
 
             .container {
-                padding: 35px 20px;
+                padding: 0 20px;
             }
 
-            .intro {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                padding-top: 25px;
+            header {
+                padding-top: 35px;
             }
 
-            .intro h1 {
-                font-size: 34px;
+            .header-inner {
+                display: block;
             }
 
-            .research-interests {
-                grid-template-columns: 1fr;
+            nav {
+                margin-top: 18px;
+                gap: 18px;
             }
 
-            .photo {
-                width: 160px;
-                height: 200px;
+            .name {
+                font-size: 29px;
+            }
+
+            section {
+                padding: 48px 0;
+            }
+
+            .project {
+                padding-bottom: 45px;
+                margin-bottom: 45px;
+            }
+
+            .project-title {
+                font-size: 22px;
             }
         }
     </style>
 </head>
 
-
 <body>
 
-<!-- Navigation -->
-<nav>
-    <div class="nav-container">
+<header>
+    <div class="container">
+        <div class="header-inner">
 
-        <div class="nav-name">
-            Gao Zixian
-        </div>
-
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#education">Education</a>
-            <a href="CV.pdf">CV</a>
-        </div>
-
-    </div>
-</nav>
-
-
-<main class="container">
-
-    <!-- Introduction -->
-    <div class="intro">
-
-        <div>
-
-            <h1>Gao Zixian</h1>
-
-            <div class="position">
-                M.Ed. Student in Educational Technology<br>
-                Beijing Normal University
+            <div>
+                <h1 class="name">Gao Zixian</h1>
+                <div class="subtitle">
+                    Educational Technology · AIED · Human-Centered Technology
+                </div>
             </div>
 
-            <p>
-                I am a master's student in Educational Technology at
-                Beijing Normal University. My research interests lie at
-                the intersection of artificial intelligence, instructional
-                design, teaching and learning, and educational technology.
-            </p>
-
-            <p>
-                I am particularly interested in AI-supported teaching and
-                learning, instructional design, and the role of human
-                pedagogical judgment in AI-mediated educational environments.
-            </p>
-
-            <div class="contact">
-                <a href="mailto:gaozixian@mail.bnu.edu.cn">
-                    Email
-                </a>
-
-                <a href="CV.pdf">
-                    CV
-                </a>
-
-                <a href="https://github.com/gggaozx">
-                    GitHub
-                </a>
-            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+            </nav>
 
         </div>
-
-
-        <!-- Photo -->
-        <div class="photo">
-            Photo
-        </div>
-
     </div>
+</header>
 
 
-    <!-- Research Interests -->
+<main>
+
+    <!-- ================= ABOUT ================= -->
+
     <section id="about">
+        <div class="container">
 
-        <h2>Research Interests</h2>
+            <h2 class="section-title">About</h2>
 
-        <div class="research-interests">
-
-            <div>
-                Artificial Intelligence in Education (AIED)
-            </div>
-
-            <div>
-                Instructional Design and Curriculum Development
-            </div>
-
-            <div>
-                LLM-Supported Teaching and Learning
-            </div>
-
-            <div>
-                Teacher Professional Development and AI Literacy
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Research -->
-    <section id="research">
-
-        <h2>Research</h2>
-
-
-        <div class="project">
-
-            <div class="project-title">
-                Value-Oriented Thematic Learning Design
-            </div>
-
-            <div class="project-meta">
-                Master's Thesis · 2024–2027
-            </div>
-
-            <p>
-                Investigating how value-oriented themes can be systematically
-                designed to support value education, with particular attention
-                to moral dilemma scenarios, value conflicts, and learners'
-                value-based decision making. The project develops and iteratively
-                refines a reusable methodology for value-oriented thematic
-                learning design.
+            <p class="about">
+                I am a master's student in Educational Technology at Beijing Normal University,
+                with a bachelor's background in Software Engineering. My research interests lie
+                at the intersection of Artificial Intelligence in Education (AIED), instructional
+                design, and human-centered technology. I approach educational research from a
+                design perspective, viewing educational systems as complex systems that can be
+                systematically constructed through design technologies, rather than relying solely
+                on intuition or experience. My work focuses on developing operational and verifiable
+                approaches to the design of learning environments, instructional processes, and
+                educational technologies, with particular interests in AI-supported teaching and
+                learning, learning design, curriculum development, teacher professional development,
+                and AI literacy. I am also interested in the relationship among AI, humans, and values,
+                particularly how ethical, moral, and other value considerations can be incorporated
+                into the design of AI-mediated educational systems.
             </p>
 
         </div>
-
-
-        <div class="project">
-
-            <div class="project-title">
-                The Limitations of Generative Artificial Intelligence
-                in Instructional Design
-            </div>
-
-            <div class="project-meta">
-                Research Project · 2025–2026
-            </div>
-
-            <p>
-                Investigating the pedagogical quality and practical usability
-                of generative AI in instructional design through a qualitative
-                comparison between AI-generated and human-designed lesson plans.
-                The project examines learning objectives, goal–method alignment,
-                temporal structure, and teacher–student interaction.
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <div class="project-title">
-                Professional Identity and Reconstruction Among Researchers
-                in the AI Era
-            </div>
-
-            <div class="project-meta">
-                Course Research Project · 2024–2025
-            </div>
-
-            <p>
-                Examining how the development of AI shapes professional identity
-                among researchers in Chinese higher education through
-                qualitative interviews and thematic analysis.
-            </p>
-
-        </div>
-
-
-        <div class="project">
-
-            <div class="project-title">
-                Educational Big Data and Learning Analytics
-                for Personalized Learning
-            </div>
-
-            <div class="project-meta">
-                Undergraduate Thesis · 2023–2024
-            </div>
-
-            <p>
-                Designed and implemented an educational data analytics system
-                for analyzing students' learning and behavioral data to support
-                personalized learning and data-informed instructional decision
-                making.
-            </p>
-
-        </div>
-
     </section>
 
 
-    <!-- Publications -->
-    <section id="publications">
+    <!-- ================= PROJECTS ================= -->
 
-        <h2>Publications &amp; Conference Presentations</h2>
+    <section id="projects">
+        <div class="container">
+
+            <h2 class="section-title">Selected Projects</h2>
 
 
-        <div class="publication">
+            <!-- PROJECT 01 -->
 
-            <span class="publication-number">1.</span>
+            <article class="project">
 
-            Yang, K., &amp; <strong>Gao, Z.</strong> (2025).
-            A brief discussion of value education.
-            <em>China Educational Technology</em>, (2), 21–28, 58.
+                <div class="project-number">01</div>
+
+                <h3 class="project-title">
+                    OpenMAIC — Massive AI-empowered Courses
+                </h3>
+
+                <div class="project-subtitle">
+                    AI in Education · Large Language Models · Multi-Agent Learning
+                </div>
+
+                <!-- Replace this placeholder with your project image/video -->
+                <div class="project-media">
+                    <span>Project image / video</span>
+                </div>
+
+                <p class="project-description">
+                    An AI-powered educational platform designed to provide interactive,
+                    multi-modal learning experiences through large language models and
+                    multi-agent systems.
+                </p>
+
+                <div class="features">
+                    <h4>Key Features</h4>
+
+                    <ul>
+                        <li>
+                            AI teachers deliver lectures with generated slides, voice narration,
+                            visual demonstrations, and interactive learning materials.
+                        </li>
+
+                        <li>
+                            Automatically generated quizzes, AI-assisted grading, instant feedback,
+                            and identification of knowledge gaps.
+                        </li>
+
+                        <li>
+                            Browser-based interactive simulations and visualizations for
+                            hands-on exploration of complex concepts.
+                        </li>
+
+                        <li>
+                            Project-based learning activities supported by coordinated AI agents.
+                        </li>
+
+                        <li>
+                            Multi-agent classroom discussions, debates, and question-and-answer
+                            interactions.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="technology">
+                    <strong>Technology</strong>
+
+                    <div class="tags">
+                        <span class="tag">LLM</span>
+                        <span class="tag">Multi-Agent Systems</span>
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">TTS</span>
+                        <span class="tag">ASR</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 02 -->
+
+            <article class="project">
+
+                <div class="project-number">02</div>
+
+                <h3 class="project-title">
+                    Educational Big Data–Based Student Personalized Information Collection System
+                </h3>
+
+                <div class="project-subtitle">
+                    Educational Big Data · Personalized Learning · Data Visualization
+                </div>
+
+                <!-- Replace this placeholder with your project image/video -->
+                <div class="project-media">
+                    <span>Project image / video</span>
+                </div>
+
+                <p class="project-description">
+                    An educational data system designed to collect, process, and visualize
+                    large-scale student behavioral data to support personalized learning
+                    and data-informed educational decision-making.
+                </p>
+
+                <div class="features">
+                    <h4>Key Features</h4>
+
+                    <ul>
+                        <li>
+                            Collection and integration of student learning and behavioral data
+                            from multiple sources.
+                        </li>
+
+                        <li>
+                            Large-scale data cleaning, transformation, aggregation, and analysis.
+                        </li>
+
+                        <li>
+                            Interactive dashboards and reports for exploring student characteristics
+                            and learning-related trends.
+                        </li>
+
+                        <li>
+                            Data analysis supporting personalized learning and educational
+                            decision-making.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="technology">
+                    <strong>Technology</strong>
+
+                    <div class="tags">
+                        <span class="tag">Hadoop</span>
+                        <span class="tag">Spark</span>
+                        <span class="tag">Flume</span>
+                        <span class="tag">Kafka</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Apache Superset</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">VMware</span>
+                    </div>
+                </div>
+
+                <p class="project-description">
+                    The system was deployed in a distributed Linux environment using three
+                    Ubuntu virtual machines. A Flume–Kafka–Flume data pipeline was implemented
+                    for data transmission and processing, with SQL-based data cleaning,
+                    transformation, and aggregation applied to more than one million student
+                    behavioral records.
+                </p>
+
+            </article>
+
+
+            <!-- PROJECT 03 -->
+
+            <article class="project">
+
+                <div class="project-number">03</div>
+
+                <h3 class="project-title">
+                    Earth Revolution and Rotation VR Learning Environment
+                </h3>
+
+                <div class="project-subtitle">
+                    Unity · Virtual Reality · 3D Visualization · Interactive Learning
+                </div>
+
+                <!-- Replace this placeholder with your project video -->
+                <div class="project-media">
+                    <span>Project video / screenshots</span>
+                </div>
+
+                <p class="project-description">
+                    An interactive VR learning environment developed with Unity for visualizing
+                    Earth's rotation, revolution, axial tilt, seasons, time zones, and climate zones.
+                </p>
+
+                <div class="features">
+                    <h4>Key Features</h4>
+
+                    <ul>
+                        <li>
+                            Interactive visualization of Earth's orbital motion and its relationship
+                            with seasonal changes.
+                        </li>
+
+                        <li>
+                            Visualization of spring, summer, autumn, and winter, together with
+                            perihelion and aphelion.
+                        </li>
+
+                        <li>
+                            Interactive control of Earth's rotation speed to explore the relationship
+                            between rotation and the passage of time.
+                        </li>
+
+                        <li>
+                            Visualization of Earth's rotational axis, North and South Poles,
+                            and axial tilt.
+                        </li>
+
+                        <li>
+                            Time-zone boundaries and major thermal zones, including tropical,
+                            temperate, and polar zones.
+                        </li>
+
+                        <li>
+                            Adjustable viewpoints, including elevated and top-down perspectives,
+                            for observing Earth's motion from different angles.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="technology">
+                    <strong>Technology</strong>
+
+                    <div class="tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">3D Visualization</span>
+                        <span class="tag">Virtual Reality</span>
+                    </div>
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 04 -->
+
+            <article class="project">
+
+                <div class="project-number">04</div>
+
+                <h3 class="project-title">
+                    Educational Knowledge Graph &amp; GraphRAG
+                </h3>
+
+                <div class="project-subtitle">
+                    Knowledge Graph · GraphRAG · Neo4j · LLM
+                </div>
+
+                <!-- Replace this placeholder with your project image/video -->
+                <div class="project-media">
+                    <span>Project image / architecture diagram</span>
+                </div>
+
+                <p class="project-description">
+                    A knowledge-based educational AI system combining an educational knowledge
+                    graph with GraphRAG to support structured knowledge retrieval and
+                    context-aware question answering.
+                </p>
+
+                <div class="features">
+                    <h4>Key Features</h4>
+
+                    <ul>
+                        <li>
+                            Construction of an educational knowledge graph representing
+                            relationships among concepts and learning-related knowledge.
+                        </li>
+
+                        <li>
+                            Deployment and management of a Neo4j graph database in a
+                            Docker-based environment.
+                        </li>
+
+                        <li>
+                            Graph-based retrieval for structured and semantically connected
+                            educational knowledge.
+                        </li>
+
+                        <li>
+                            Integration of graph-based retrieval with large language models
+                            for context-aware responses.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="technology">
+                    <strong>Technology</strong>
+
+                    <div class="tags">
+                        <span class="tag">GraphRAG</span>
+                        <span class="tag">Knowledge Graph</span>
+                        <span class="tag">Neo4j</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">LLM</span>
+                        <span class="tag">Graph Database</span>
+                    </div>
+                </div>
+
+            </article>
 
         </div>
-
-
-        <div class="publication">
-
-            <span class="publication-number">2.</span>
-
-            <strong>Gao, Z.</strong>, &amp; Yang, K. (2026).
-            The limitations of generative artificial intelligence
-            in instructional design.
-            <em>Journal of Distance Education</em>.
-            <em>Under review.</em>
-
-        </div>
-
-
-        <div class="publication">
-
-            <span class="publication-number">3.</span>
-
-            <strong>Gao, Z.</strong> (2026).
-            Reconfiguring pedagogical agency in GenAI-supported
-            instructional design.
-            <em>2026 British Educational Research Association (BERA)
-            Annual Meeting</em>.
-            <em>Accepted for presentation.</em>
-
-        </div>
-
-
-        <div class="publication">
-
-            <span class="publication-number">4.</span>
-
-            <strong>Gao, Z.</strong> (2027).
-            Designing for values: A critical review of value-themed
-            learning design in contemporary education.
-            <em>2027 American Educational Research Association (AERA)
-            Annual Meeting</em>.
-            <em>Conference proposal under review.</em>
-
-        </div>
-
-
-        <div class="publication">
-
-            <span class="publication-number">5.</span>
-
-            <strong>Gao, Z.</strong> (2026).
-            Human-centered AI for value-oriented thematic learning:
-            From transmission to value inquiry.
-            <em>2026 China–Japan–Korea Forum on Teacher and Student Education</em>.
-            <em>Forum submission under review.</em>
-
-        </div>
-
-    </section>
-
-
-    <!-- Education -->
-    <section id="education">
-
-        <h2>Education</h2>
-
-
-        <div class="education-item">
-
-            <div class="education-school">
-                Beijing Normal University
-            </div>
-
-            <div class="education-degree">
-                M.Ed. in Educational Technology · GPA: 3.6/4
-            </div>
-
-            <div class="education-date">
-                2024–2027
-            </div>
-
-        </div>
-
-
-        <div class="education-item">
-
-            <div class="education-school">
-                Henan University of Technology
-            </div>
-
-            <div class="education-degree">
-                B.Eng. in Software Engineering · GPA: 3.9/4
-            </div>
-
-            <div class="education-date">
-                2020–2024
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section>
-
-        <h2>Contact</h2>
-
-        <p>
-            <strong>Email:</strong>
-            <a href="mailto:gaozixian@mail.bnu.edu.cn">
-                gaozixian@mail.bnu.edu.cn
-            </a>
-        </p>
-
-        <p>
-            Beijing Normal University<br>
-            Beijing, China
-        </p>
-
     </section>
 
 </main>
 
 
 <footer>
-
-    © 2026 Gao Zixian
-
+    <div class="container">
+        © Gao Zixian
+    </div>
 </footer>
-
 
 </body>
 </html>
+```
